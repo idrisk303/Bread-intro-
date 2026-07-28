@@ -9,19 +9,32 @@ body{
     height:100vh;
 }
 
-#logo{
-    width:250px;
-    animation:pulse 2s infinite;
-    filter:drop-shadow(0 0 25px gold);
-}
-
 h1{
-    color:gold;
-    font-size:40px;
-    font-family:Arial;
-    text-shadow:0 0 20px gold;
-}
 
+position:absolute;
+
+top:80%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+color:gold;
+
+font-size:40px;
+
+font-family:Arial;
+
+text-shadow:
+0 0 10px gold,
+0 0 30px orange,
+0 0 60px yellow;
+
+transition:1s;
+
+opacity:1;
+
+}
 @keyframes pulse{
 
 0%{
@@ -36,4 +49,15 @@ transform:scale(1.1);
 transform:scale(1);
 }
 
+}
+#logo{
+    position:absolute;
+    top:40%;
+    left:-300px;
+    width:250px;
+    animation:
+        drive 10s linear infinite,
+        float 3s ease-in-out infinite,
+        pulse 2s infinite;
+    filter:drop-shadow(0 0 30px gold);
 }
