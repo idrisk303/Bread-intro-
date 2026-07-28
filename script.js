@@ -1,33 +1,15 @@
-const messages=[
-"A NEW LEGEND IS RISING",
-"THE FUTURE IS BAKING",
-"JOIN THE BAKERS"
-];
+const text = document.querySelector("h1");
 
-let index=0;
+text.innerHTML = "";
 
-const title=document.querySelector("h1");
+setTimeout(() => {
+    text.innerHTML = "A NEW LEGEND IS RISING";
+}, 1000);
 
-function nextScene(){
+setTimeout(() => {
+    text.innerHTML = "THE FUTURE IS BAKING";
+}, 5000);
 
-title.style.opacity=0;
-
-setTimeout(()=>{
-
-title.innerHTML=messages[index];
-
-title.style.opacity=1;
-
-index++;
-
-if(index<messages.length){
-
-setTimeout(nextScene,3000);
-
-}
-
-},1000);
-
-}
-
-setTimeout(nextScene,2000);
+setTimeout(() => {
+    text.innerHTML = "JOIN THE BAKERS";
+}, 9000);
