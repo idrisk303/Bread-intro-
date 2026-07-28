@@ -30,11 +30,25 @@ text-shadow:
 0 0 30px orange,
 0 0 60px yellow;
 
-transition:1s;
+transition: opacity 0.8s ease;
 
-opacity:1;
 
 }
+#logo{
+    position:absolute;
+    top:35%;
+    left:-500px;
+    width:380px;
+    filter:
+        drop-shadow(0 0 20px gold)
+        drop-shadow(0 0 50px orange);
+
+    animation:
+    drive 8s ease-out forwards,
+    pulse 2s infinite;
+}
+
+
 @keyframes pulse{
 
 0%{
@@ -51,17 +65,6 @@ transform:scale(1);
 
 }
 
-#logo{
-position:absolute;
-top:35%;
-left:-500px;
-width:380px;
-filter:
-drop-shadow(0 0 20px gold)
-drop-shadow(0 0 50px orange);
-
-animation:drive 8s ease-out forwards;
-}
 
 @keyframes drive{
 
