@@ -1,15 +1,31 @@
 const text = document.querySelector("h1");
 
-text.innerHTML = "";
+const scenes = [
+    "A NEW LEGEND IS RISING",
+    "THE FUTURE IS BAKING",
+    "JOIN THE BAKERS"
+];
 
-setTimeout(() => {
-    text.innerHTML = "A NEW LEGEND IS RISING";
-}, 1000);
+let i = 0;
 
-setTimeout(() => {
-    text.innerHTML = "THE FUTURE IS BAKING";
-}, 5000);
+function showScene() {
 
-setTimeout(() => {
-    text.innerHTML = "JOIN THE BAKERS";
-}, 9000);
+    text.style.opacity = 0;
+
+    setTimeout(() => {
+
+        text.innerHTML = scenes[i];
+
+        text.style.opacity = 1;
+
+        i++;
+
+        if (i < scenes.length) {
+            setTimeout(showScene, 3000);
+        }
+
+    }, 800);
+
+}
+
+showScene();
