@@ -52,12 +52,24 @@ transform:scale(1);
 }
 #logo{
     position:absolute;
-    top:40%;
-    left:-300px;
-    width:250px;
-    animation:
-        drive 10s linear infinite,
-        float 3s ease-in-out infinite,
-        pulse 2s infinite;
+    width:380px;
+    left:-450px;
+    top:35%;
     filter:drop-shadow(0 0 30px gold);
+    animation:drive 8s ease-in-out forwards;
+}
+@keyframes drive{
+
+0%{
+left:-450px;
+}
+
+70%{
+left:28%;
+}
+
+100%{
+left:28%;
+}
+
 }
